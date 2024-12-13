@@ -19,6 +19,7 @@
 
 - solana-cli 2.0.18
 - yellowstone-grpc v3.1.0 (grpc, 可以不装)
+- ubuntu 22.04
 
 ### 2. 搭建
 
