@@ -5,6 +5,7 @@
 ## 版本
 - solana-cli 2.0.18
 - yellowstone-grpc v3.1.0
+- ubuntu 22.04
 
 ## 1. 准备
 
