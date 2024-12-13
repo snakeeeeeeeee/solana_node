@@ -322,6 +322,15 @@ journalctl -u sol -f --no-hostname -o cat
 ps aux | grep solana-validator
 
 ```
+```shell
+# 查看同步进度
+solana-keygen pubkey /root/validator-keypair.json
+solana gossip | grep {pubkey}
+solana catchup {pubkey}
+
+# 如果更改了端口
+solana catchup --our-localhost {rpc port}
+```
 
 ### 遇到的一些问题
 
