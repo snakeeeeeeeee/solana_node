@@ -330,6 +330,25 @@ solana catchup {pubkey}
 
 # 如果更改了端口
 solana catchup --our-localhost {rpc port}
+
+# 如果还是无法查看同步进度
+tail -f /root/solana-rpc.log | awk '
+/highest-confirmed-slot=/ {
+    split($0, a, "highest-confirmed-slot=");
+    split(a[2], b, "i");
+    confirmed=b[1];
+}
+/optimistic_slot slot=/ {
+    split($0, c, "slot=");
+    split(c[2], d, "i");
+    latest=d[1];
+    if(confirmed != "" && latest != "") {
+        printf "已确认slot: %d, 最新slot: %d, 差值: %d\n", 
+        confirmed, latest, latest-confirmed;
+        fflush();
+    }
+}'
+
 ```
 
 ### 遇到的一些问题
