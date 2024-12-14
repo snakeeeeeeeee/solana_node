@@ -353,6 +353,25 @@ tail -f /root/solana-rpc.log | awk '
 
 ```
 
+### 快照
+
+如果嫌下载快照数据太慢, 可以提前先下载快照数据, 这里使用的是docker. 参考: https://github.com/c29r3/solana-snapshot-finder
+```shell
+
+# -v /root/sol/ledger 是自己的ledger路径
+
+sudo docker run -it --rm \
+-v /root/sol/ledger:/solana/snapshot \
+--user $(id -u):$(id -g) \
+c29r3/solana-snapshot-finder:latest \
+--snapshot_path /solana/snapshot \
+--min_download_speed 20 \
+--threads_count 50 \
+--max_snapshot_age 500 \
+--measurement_time 60
+
+```
+
 ### 遇到的一些问题
 
 #### 追不上slot
