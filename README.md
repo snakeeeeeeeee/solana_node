@@ -12,7 +12,7 @@
 ### 1.1. 硬件
 - CPU solana构建索引的时候非常吃cpu, 我搭建的时候cpu是AMD EPYC 9554P 64-Core
 - RAM 稳定运行的内存大概是400G左右, 所以安全一点推荐配置512G及其以上的内存
-- 网络 10Gbps及其以上的带宽
+- 网络 1Gbps+
 - 磁盘 两个nvme 2T以上的容量(重要, 一定要分开挂载到ledger和accounts上)
 
 
