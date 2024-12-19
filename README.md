@@ -396,6 +396,4 @@ chmod +x config-check-ubuntu-22.04
 搭建过程参考了一些资料, 以及solana社区大佬们的热心帮助, 希望本记录能帮助到更多需要搭建solana节点的小伙伴.
 
 # 参考资料
-https://chainbuff.com/d/2
-<br>
-https://chainbuff.com/d/8
+https://chainbuff.gitbook.io/tutorials/solana/da-jian-ji-chu-she-shi
