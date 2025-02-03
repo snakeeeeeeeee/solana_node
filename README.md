@@ -199,7 +199,6 @@ exec agave-validator \
     --account-index spl-token-mint \
     --account-index spl-token-owner \
     --enable-rpc-transaction-history \
-    --enable-cpi-and-log-storage \
     --init-complete-file /root/init-completed \
     --log /root/solana-rpc.log \
     --log-messages-bytes-limit 1073741824 \
