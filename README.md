@@ -172,6 +172,8 @@ vim /root/sol/bin/validator.sh
 ```shell
 #!/bin/bash
 
+export RUST_LOG=warn
+
 exec agave-validator \
     --identity /root/validator-keypair.json\
     --ledger /root/sol/ledger \
